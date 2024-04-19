@@ -6,22 +6,23 @@ vpc_conf = {
   enable_dns_hostnames = true
   enable_dns_support   = true
 }
-region = "ap-south-1"
+region = "us-east-1"
 
 # Subnet Configurations - Specify CIDR blocks and map them to availability zones
 public_subnets = {
-  "ap-south-1a" = "10.0.1.0/24"
-  "ap-south-1b" = "10.0.2.0/24"
+  "us-east-1a" = "10.0.1.0/24"
+  "us-east-1b" = "10.0.2.0/24"
 }
 
 private_subnets = {
-  "ap-south-1a" = "10.0.3.0/24"
-  "ap-south-1b" = "10.0.4.0/24"
+  "us-east-1a" = "10.0.3.0/24"
+  "us-east-1b" = "10.0.4.0/24"
 }
 
 # EC2 and AMI Configuration
-instance_type = "t3a.medium"
-ami_id        = "ami-09298640a92b2d12c" # Replace with a valid AMI ID for your region
+instance_type = "t2.micro"
+ami_id        = "ami-0a1179631ec8933d7
+" # Replace with a valid AMI ID for your region
 
 
 #ALB
