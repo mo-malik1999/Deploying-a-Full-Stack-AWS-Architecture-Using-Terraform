@@ -3,11 +3,11 @@ data "aws_route53_zone" "main" {
   depends_on = [aws_route53_zone.main]
 }
 resource "aws_route53_zone" "main" {
-  name = "codedevops.cloud"
+  name = "momalik.info"
 }
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "momalik" {
   zone_id = aws_route53_zone.main.zone_id
-  name    = "www.codedevops.cloud"
+  name    = "momalik.info"
   type    = "A"
 
   alias {
@@ -17,13 +17,13 @@ resource "aws_route53_record" "www" {
   }
 }
 resource "aws_acm_certificate" "example_cert" {
-  domain_name       = "www.codedevops.cloud"
+  domain_name       = "momalik.info"
   validation_method = "DNS"
 
-  subject_alternative_names = ["*.codedevops.cloud"]
+  subject_alternative_names = ["*.momalik.info"]
 
   tags = {
-    Environment = "production"
+    Environment = "staging"
   }
 
   lifecycle {
