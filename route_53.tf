@@ -1,5 +1,5 @@
 data "aws_route53_zone" "main" {
-  name       = "codedevops.cloud." # Ensure the domain name ends with a dot
+  name       = "momalik.info." # Ensure the domain name ends with a dot
   depends_on = [aws_route53_zone.main]
 }
 resource "aws_route53_zone" "main" {
