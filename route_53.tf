@@ -5,9 +5,9 @@ data "aws_route53_zone" "main" {
 resource "aws_route53_zone" "main" {
   name = "momalik.info"
 }
-resource "aws_route53_record" "momalik" {
+resource "aws_route53_record" "www" {
   zone_id = aws_route53_zone.main.zone_id
-  name    = "momalik.info"
+  name    = "www.momalik.info"
   type    = "A"
 
   alias {
